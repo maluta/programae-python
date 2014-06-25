@@ -13,7 +13,7 @@ project_name = "programae"
 ###############################
 
 master_url = 'http://127.0.0.1:8080'
-master_app = 'runestone'
+master_app = 'python'
 
 options(
     sphinx = Bunch(docroot=".",),
