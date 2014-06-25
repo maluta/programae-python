@@ -1,14 +1,22 @@
 Programaê lessons plans
 =======================
 
-After clone '(runestone)[http://runestoneinteractive.org/build/html/developer.html]' repo run:
+After clone '[runestone](http://runestoneinteractive.org/build/html/developer.html)' repo run:
 
- git submodule add git@github.com:maluta/programae-python.git
- cd programae-python
+```
+ $ git submodule add git@github.com:maluta/programae-python.git
+ $ cd programae-python
+```
 
-Start coding, working, learning 
+Build the book: 
 
-All feedback are welcome :)
+```
+ $ paver build
+```
 
-Tiago Maluta <tiago.maluta@gmail.com>
+Start writing :-)
 
+Feedbacks are welcome :)
+
+Tiago Maluta (tiago.maluta@gmail.com)
+http://www.programae.org.br
