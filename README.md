@@ -23,9 +23,9 @@ Generated book will be availabe at topdir _static_ folder
 
 ### Contribute ###
 
-The *content* is availabe at _source folder.
+The **content** is availabe at [_source](https://github.com/maluta/programae-python/tree/master/_sources) folder.
 
-http://interactivepython.org/courselib/static/overview/overview.html
+Components overview: http://interactivepython.org/courselib/static/overview/overview.html
 
 
 ### Contact ###
