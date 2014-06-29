@@ -110,3 +110,6 @@ Avalie a participação dos alunos na primeira parte e o interesse em experiment
 
 Referências
 ----------
+
+`Site oficial do Python <http://python.org>`__
+`Porque Aprender a Programar <http://ramalho.pro.br/aprendaprog/cap0.html>`__
