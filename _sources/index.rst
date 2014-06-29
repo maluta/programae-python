@@ -17,14 +17,13 @@ Planos de Aula - Programaê - Python
 Aula 1: Começando
 :::::::::::::::::::::::::::
 
+Despertar o interesse para programação, evidenciando seus benefícios. Este aula é
+é o primeiro contato com conceitos, ferramenta e linguagem.
+
 .. toctree::
    :maxdepth: 2
 
-   Aula1/objetivos.rst
-   Aula1/motivação.rst
-   Aula1/introdução.rst
-   Aula1/programando.rst
-   Aula1/instalação.rst
+   Aula1/Plano.rst
 
 Aula 2:
 :::::::::::::::::::::::::::::::::
@@ -32,7 +31,4 @@ Aula 2:
 .. toctree::
    :maxdepth: 2
 
-   morecontent.rst
-   words.rst
-   somestuff.rst
-   MoreThings/apples.rst
+   Aula2/Plano.rst
