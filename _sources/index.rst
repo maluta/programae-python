@@ -17,16 +17,17 @@ Planos de Aula - Programaê - Python
 Aula 1: Começando
 :::::::::::::::::::::::::::
 
-Despertar o interesse para programação, evidenciando seus benefícios. Este aula é
-é o primeiro contato com conceitos, ferramenta e linguagem.
+Despertar o interesse para programação, evidenciando seus benefícios. Este aula é o primeiro contato com conceitos, ferramenta e linguagem (Tempo: 60 min)
 
 .. toctree::
    :maxdepth: 2
 
    Aula1/Plano.rst
 
-Aula 2:
+Aula 2: Conceitos
 :::::::::::::::::::::::::::::::::
+
+Brincando com o console. Esta aula ira desenvolver o primeiro contato no modo interativo (console) e introduzir alguns conceitos da linguagem. 
 
 .. toctree::
    :maxdepth: 2

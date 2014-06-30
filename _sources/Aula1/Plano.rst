@@ -88,10 +88,9 @@ Não se preocupe neste momento em descrever cada uma, o importante é destacar c
 
 É importante neste momento:
 
-- Gerar erros de sintaxe e observar a resposta do computador.
+- Gerar erros de sintaxe.
 - Escrever palavras reservadas e não reservadas.
 - Como armazenar uma variável (uma idéia é salvar a idade dos alunos).
-- Como buscar ajuda quando alguma coisa der errado.
 - Liberdade para explorar. 
 
 .. activecode:: idade
@@ -100,13 +99,13 @@ Não se preocupe neste momento em descrever cada uma, o importante é destacar c
 	print "Minha idade:", idade
 
 
-Por fim, demonstre que programa é construir soluções. Podemos instruir o computador a automatizar este processo. 
+Por fim, demonstre que programa é construir soluções. Podemos instruir o computador a automatizar este processo. Quais soluções podem ser desenvolvidas para facilitar nossas vidas? Quais programas precisam ser desenvolvidos? Há espaço para mais jogos? 
 
 
 Avaliação
 ----------
 
-Avalie a participação dos alunos na primeira parte e o interesse em experimentar a plataforma. 
+Avalie a participação dos alunos na primeira parte e o interesse em experimentar a ferramenta. 
 
 Referências
 ----------
