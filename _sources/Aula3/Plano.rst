@@ -8,21 +8,26 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
+Aula 3
+---------
+
 Objetivos
-----------
++++++++++
 
 - Compreender como uma variável armazena uma informção. 
 - Compreender a diferença entre um número e uma *string*
 - Ententer o propósito de listas (*list*) e tuplas (*tuple*)
 
 
-Materiais
-----------
+Preparação
++++++++++
+
+**Materiais**
 
 - IDLE
 
 Atividades
-----------
+++++++++++
 
 1. Relembre as primeiras lições abrindo o console e executando um programa
 2. Crie um programa para armazenar um número em uma variável 
@@ -49,7 +54,7 @@ Faça uma diferenciação nos tipos de dados utilizados, faça uma analogia aos 
 	Exemplos: ``"10"``, ``"3.14159", ``"nome"``
 
 * Tipo Lista
-	Exemploa: ``[]``, ``"['a','b','c']", ``[1,2,3]``
+	Exemploa: ``[]``, ``"['a','b','c']"``, ``[1,2,3]``
 
 
 .. activecode:: Tipos
@@ -93,9 +98,9 @@ Para intruduzir o conceito de procedimento, mostre a execução do programa pass
 		print("Escolha as opcoes:")
 		# adicione opções aqui
 	else:
-		print("Você não tem idade para jogar")
+		print("Voce nao tem idade para jogar")
 	
 
-Avaliação
-----------
+Reflexão
+++++++++
 
