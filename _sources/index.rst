@@ -17,7 +17,7 @@ Planos de Aula - Programaê - Python
 Aula 1: Começando
 :::::::::::::::::::::::::::
 
-Despertar o interesse para programação, evidenciando seus benefícios. Este aula é o primeiro contato com conceitos, ferramenta e linguagem (Tempo: 60 min) 
+Despertar o interesse para programação, evidenciando seus benefícios. Este aula é o primeiro contato com conceitos, ferramenta e linguagem (Tempo min: 60 min) 
 
 `Ver conteúdo <Aula1/Plano.html>`_
 

@@ -65,7 +65,7 @@ Demonstre a prioridade dos operadores matemáticos.
 - Observar a precedências dos operadores.
 - Gerar erros de sintaxe.
 - Escrever palavras reservadas e não reservadas.
-- Armazenar valores em variáveis (operador de atribuição ``=``)
+- Armazenar valores em variáveis (lembre-se do operador de atribuição ``=``)
 - Lembre-se que podemos usar quantas variáveis quisermos 
 - Sobrescrever variáveis.
 
