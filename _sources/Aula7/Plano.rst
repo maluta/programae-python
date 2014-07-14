@@ -8,84 +8,135 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-Aula 7: Aventuras no texto (II)
-===============================
+Aula 5: Mais com textos
+=======================
 
 Objetivos
 +++++++++
 
-- Aprender o conceito de dicionários 
-- Aprender o conceito de tuplas
-- Construir o enrredo da história (transições)
-
+- Experimentar possibilidades de uso do comando ``print()``
+- Verificar o tamanho da string com a instrução ``len()``
+- Concatenação de strings
+- Fatiamento de strings
+- Métodos *comuns* para strings
 
 Preparação
 ++++++++++
 
 - IDLE - Veja na seção de ajuda `Como instalar o Python <../Apoio/comoinstalar.html>`__ 
+- `Editar <../Apoio/idle.html#sugestao-de-layout>`__ e `executar <../Apoio/idle.html#executando-um-codigo>`__ códigos no IDLE.
 
 Atividades
 ++++++++++
 
-**Conceitos computacionais**
+**Conceitos computacionais** 
 
-1. Tuplas 
+1. Comece por definir uma string simples, entre aspas.
 
-São semelhantes as listas, exceto que eles não permitem alterações. Um Exemplo prático para demonstrar são os meses do ano.
+.. admonition:: Aspas duplas ou simples?
 
-.. activecode:: tuple
+	Desde que exista um padrão, tanto faz. Você pode usar ``print('texto')`` ou ``print("texto")``
 
-  meses = ("Janeiro","Fevereiro", u"Março","Abril",
-           "Maio","Junho","Julho","Agosto","Setembro",
-           "Outubro","Novembro","Dezembro")
-  print(meses)
-           
-.. admonition:: Tuplas com um único elemento
 
-  Uma tupla unitária precisa ser definida como ``( valor, )`` caso contrário será definido com o *tipo* do valor. 
+2. Armazene e imprima o conteúdo de variável 
+3. Mostre como contar o número de caracteres com a função ``len()`` 
 
-2. Dicionários.
+.. activecode:: strings1
 
-Dicionários sao similiares a outros tipos compostos exceto por eles poderem user qualquer tipo imutavel de dados como indice. Como exemplo, nos criaremos um dicionário para traduzir palavras em Inglês para Espanhol. Para esse dicionário, os indices serão strings.
+	 texto = u"programar é muito bom"
+	 print(texto)
+	 print(len(texto))
 
-.. activecode:: dict
+4. Reforce a questão de índices dentro do tipo string, demonstrando as formas de acesso. Você pode fazer isso de maneira fácil no `console <../Apoio/idle.html#console-iterativo>`__. 
 
-  dicionario = {
-                  'car':u"carro",
-                  'bus':u"ônibus"
-               }
-               
-  print( dicionario['car'] )
-  print( dicionario['bus'] )
-  print( dicionario.keys() )
-  
-**Enrredo**
+.. sourcecode:: python
 
-1. Na construção da história os lugares são tuplas
-2. Na construção da história as transições são dicionários
+  >>> "Programaê"[0]
+  'P'
+  >>> "Programaê"[8]
+  'ê'
+  >>> "Programaê"[9]
+  Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+  IndexError: string index out of range
 
-.. activecode:: transictions
 
-  sala = ( "sala", u"Você está na sala principal da mansão")
-  quarto = ( "quarto", u"Você esta no quarto")
-  cozinha = ( "cozinha", u"Você esta na cozinha" ) 
-  
-  transicoes = { # da ____ : você pode ir para ( ____ , ____ , ...)
-                  sala: (quarto, cozinha),
-                  quarto: (sala, cozinha),
-                  cozinha: (quarto, sala)
-               } 
+A palavra "Programaê" tem 9 caracteres. O primeiro ``[0]`` e o último ``[8]``, ao tentarmos acessar um índice acima, ex ``[10]`` obtemos 
+um erro indicando que o índice esta fora da faixa permitida. 
 
-**Prosposta**
+5. Fatiamento de strings.
 
-- Proponha a continuação da aula passada com os alunos construindo as ações. 
+.. activecode:: strings2
+
+	 texto = u"programar É muito bom"
+	 print(texto[0]) # primeiro caractere
+	 print(texto[:9]) # do ínicio (índice zero) até o índice 8
+	 print(texto[10:11]) # apenas o índice 10
+	 print(texto[12:17]) # do índice 12 até o 16
+	 print(texto[18:]) # do índice 18 até o final
+	 
+Pontos importantes: 
+
+- O índice da string sempre começa em "0" (o primeiro item é a posição zero)
+- Não se esqueça que espaços em branco ``" "`` também são considerados. 
+
+- Para acessar um único caracter utilizamos: ``texto[índice]``
+- Para um fatiamento pode ser completo utilizamos **posição de início** ``:`` **posição final** (mas em incluí-la).
+
+6. Trabalhe funções comuns para manipular strings
+
+.. activecode:: strings3
+
+	texto = u"programar É muito bom"
+	print( texto ) # texto original
+	print( texto.upper() ) # todo o texto em letras maiúsculas
+	print( texto.lower() ) # todo o texto em letras minúsculas
+	print( texto.capitalize() ) # texto com a primeira letra maiúscula
+	print( texto.count('a') ) # quantas vezes a letra 'a' aparece
+	print( texto.find('a') ) # retorna o índice da primeira ocorrência da letra 'a'
+	print( texto.replace(' ','_') ) # substitui todos os espaços em branco por '_'
+	
+
+É possível deixar o texto mais amigável introduzindo quebras de linha ou caracteres especiais. Por exemplo, 
+como adicionar uma aspas se ela é o delimitador do tipo string? A linguagem Python oferece um caractere de *escape*, 
+ou seja, tudo que estiver em seguida ao ``\`` irá ser ignorado pelo interprador. Alguns exemplos:
+
+.. admonition:: Caracteres de escape (``\``)
+
+	- barra invertida ``\\`` 
+	- aspas simples ``\'`` 
+	- aspas duplas ``\"`` 
+	- quebra de linha ``\n``
+	- seção tabular ``\t``
+
+Um erro comum acontece ao definirmos uma *string*. Ao utilizarmos um caractere de escape para introduzir uma aspa e esquecermos 
+fechá-la obteremos um erro de sintaxe, descrito no exemplo abaixo: 
+	
+.. sourcecode:: python
+   
+  >>> print("programaê\")
+  File "<stdin>", line 1
+    print("programaê\")
+                       ^
+  SyntaxError: EOL while scanning string literal
+
+	
+	
+**Proposta** 
+
+- Impressão de poesias (haikais) com ``print()`` e o delimitador ``\t``
+
+.. activecode:: strings4
+
+	texto="Pra que cara feia?\n\tNa vida,\nNinguém paga meia.\n\n(Paulo Leminski)"
+	print(texto)
+
+- Construir um validador de *twitts*. Como saber se meu texto "cabe" dentro de uma mensagem no **Twitter** (limite de 140 caracteres)
+- Construir um buscador de palavras no textual 
+
 
 Reflexão
 ++++++++
 
-- Você já conhece alguma texto-aventura?
-- Faça uma pesquisa nas histórias existentes.
-- Jogos de RPG podem ser automatizados?
-
-
+- Onde este tipo de manipulação pode ser utilizado nas aulas de literatura/português?
 
