@@ -98,7 +98,7 @@ Termine apresentando as regras da **Fábrica de Jogos**:
 
 	- Grupos de até 3 alunos. 
 	- Nas próximas aulas, os alunos receberão o desafios de construir um jogo. 
-	- O professor (na figura de investidor) irá distribuir 100 `progmoney <../Apoio/progmoney.html>`__  (sigla ``$>``) para cada grupo começar a empresa.
+	- O professor (na figura de investidor) irá distribuir 10 `progmoney <../Apoio/progmoney.html>`__  (sigla ``$>``) para cada grupo começar a empresa.
 	- Em cada aula os alunos receberão uma lista de comandos **permitidos** para construção do jogos. 
 	- A construção de código tem um *custo* em *progmoney*
 	- Cada linha de código custa ``1 $>``.
@@ -106,6 +106,14 @@ Termine apresentando as regras da **Fábrica de Jogos**:
 	- Ao aprender funcionalidade novas os grupos adquirem mais *progmoney*.
 	- Os preços por instrução/comando estão em uma `tabela <../Apoio/progmoney.html>`__.
 
+**Atividades para a empresa**
+
+- Organizar a sala em grupos.
+- Dar um nome a empresa. 
+- Escrever uma carta de apresentação dos componentes. 
+
+	
+	
 Reflexão
 +++++++++
 
