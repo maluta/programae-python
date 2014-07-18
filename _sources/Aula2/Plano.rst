@@ -29,10 +29,15 @@ Preparação
 Atividades
 +++++++++++
 
+.. admonition:: Preparação
+
+  Nas primeiras aulas há muitas novidades, comandos novos, ambiente, termos em inglês.
+  Trabalhe sem pressa com os alunos e anote o `feedback <../Apoio/feedback.html>`__ 
+
+
 **Conceitos computacionais**
 
-1. Inicialize o console do IDLE e explique o papel do console para execução de códigos rápidos.
-2. Demonstre a execução de um programa simples.
+1. Inicialize o console do IDLE e explique o papel do console para execução de códigos rápidos, no modelo: comando → resposta. 
 
 Instigue os alunos a experimentarem o console, introduza as instruções para uma calculadora simples. 
 
@@ -54,7 +59,7 @@ Resto	(%)			``9 % 3``
   print(9 / 3)
   print(10 % 6)
 
-Note que no *console* do IDLE não precisamos de utilizar a função ``print()`` para obtermos o resultado de uma sentença aritmética.
+Note que no *console* do IDLE **não** precisamos de utilizar a função ``print()`` para obtermos o resultado de uma sentença aritmética.
 
 É importante neste momento:
 
@@ -80,8 +85,7 @@ Uma sugestão de primeiro desafio para as equipes é converter o *progmoney* em 
 
 **Atividades para a empresa**
 
-- Acumular *progmoney* resolvendo exercícios do banco de idéias.
-
+- Acumular *progmoney* resolvendo exercícios do `banco de idéias. <../Aula2/Exercicios.html>`__ 
 
  
 Reflexão
