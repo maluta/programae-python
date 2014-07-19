@@ -80,12 +80,23 @@ Apresente operações para lidar com:
 - Conversão de medidas.
 - Conversão de moedas.
 
-Uma sugestão de primeiro desafio para as equipes é converter o *progmoney* em R$, sugira um índice de conversão (ex. ``1 $> = 0.01 R$``)
  
 
 **Atividades para a empresa**
 
-- Acumular *progmoney* resolvendo exercícios do `banco de idéias. <../Aula2/Exercicios.html>`__ 
+- Os alunos poderão acumular *progmoney* resolvendo exercícios do `banco de idéias <../Aula2/Exercicios.html>`__.
+- Destravar novos cartões de funcionalidades para serem utilizados em futuros projetos. 
+- Cartões disponíveis para esta aula (veja mais detalhes sobre os `cartões de funcionalidades <../Apoio/cartoes.html>`__)
+
++------------------------------+--------------------------------------------------+
+|  Cartões de funcionalidades  |  Custo (`progmoney <../Apoio/progmoney.html>`__) |
++==============================+==================================================+
+|  **Potenciação**             |  ``20 $>``                                       |
++------------------------------+--------------------------------------------------+  
+|  **Frações**                 |  ``25 $>``                                       |
++------------------------------+--------------------------------------------------+
+
+Para ver os cartões da aula clique `aqui <../Apoio/cartoes.html#aula-2>`__
 
  
 Reflexão

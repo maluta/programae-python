@@ -3,9 +3,10 @@
 .. role:: raw-math(raw)
     :format: latex html
 
-Exercícios 
-==========================
+Exercícios para Aula
+======================
 
+Aula `referente <../Aula2/Plano.html>`__
 
 **Grupo 1 - Frações**
 
