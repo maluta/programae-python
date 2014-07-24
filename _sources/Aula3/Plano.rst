@@ -8,199 +8,99 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-Aula 3: Variáveis
+Aula 3: Calculadora
 ======================
 
 Objetivos
 +++++++++
 
-
-- Aprender como salvar e executar programas no IDLE.
-- Entender o conceito de variável.
-- Entender quais tipos de dados podem ser armazenados. 
-- Melhorar a legibilidade.
-
+- Construir uma sequência de instruções dentro do ambiente (IDLE)
+- Compreender a lógica dos operadores aritméticos básicos dentro do `console <../Apoio/idle.html#console-interativo>`__.
 
 Preparação
 ++++++++++
 
 **Materiais**
 
-- IDLE - Veja na seção de ajuda `Como instalar o Python <../Apoio/comoinstalar.html>`__ 
-- `Editar <../Apoio/idle.html#sugestao-de-layout>`__ e `executar <../Apoio/idle.html#executando-um-codigo>`__ códigos no IDLE.
+- Ambiente IDLE (Veja na seção de ajuda: `Como instalar o Python <../Apoio/comoinstalar.html>`__)
+- `Console <../Apoio/idle.html#console-interativo>`__ do IDLE
+
 
 Atividades
-++++++++++
++++++++++++
+
+.. admonition:: Preparação
+
+  Nas primeiras aulas há muitas novidades, comandos novos, ambiente, termos em inglês.
+  Trabalhe sem pressa com os alunos e anote o `feedback <../Apoio/feedback.html>`__ 
 
 
 **Conceitos computacionais**
 
-1. Relembre as funcionalidades do IDLE utilizando o console.
-2. Ainda no console, crie um programa para armazenar um número em uma variável.
+1. Inicialize o console do IDLE e explique o papel do console para execução de códigos rápidos, no modelo: comando → resposta. 
 
-.. activecode:: variavel
+Instigue os alunos a experimentarem o console, introduza as instruções para uma calculadora simples. 
 
-  ano = 2014
+=================	=============	
+Operação			Exemplo
+=================	=============	
+Adição (+)			``4 + 3``
+Subtração (-)		``10 - 6``
+Multiplicação (*)	``7 * 6``
+Divisão	(/)			``9 / 3``
+Resto	(%)			``9 % 3``
+=================	=============
 
-3. Transfira este conceito para o `editor de texto <../Apoio/idle.html#novo-codigo>`__.
-4. Defina um tipo (*string*) para armazenar textos.
+.. activecode:: Operações Básicas
 
-.. sourcecode:: python
-	
-	>>> nome = "Pedro" 
-	>>> sobrenome = "Silva"
-	
+  print(4 + 3)
+  print(10 - 6)
+  print(7 * 6)
+  print(9 / 3)
+  print(10 % 6)
 
-Repare que o *tipo* da variável é definido no momento que associamos um valor a ela. 
-	
-5. Verifique quais conceitos aritméticos aplicam-se em variáveis que armazenam números. 
+Note que no *console* do IDLE **não** precisamos de utilizar a função ``print()`` para obtermos o resultado de uma sentença aritmética.
 
-.. activecode:: idade
+É importante neste momento:
 
-  ano = 2014
-  nascimento = 1998
-  idade = ano - nascimento
-  print(idade)
-
-Destaque que cada *tipo* de dado permite operações diferentes, por exemplo, se armazenarmos um tipo **string** podemos concatenar (``+``) ou repetir (``*``) mas não subtrair ou dividir. 
-
-.. activecode:: string
-
-  nome = "nome"
-  sobrenome = "sobrenome"
-  nome_completo = nome + sobrenome
-  print(nome_completo)
-  print(nome * 5)
-
-  
-  
-6. Quais as regras para definir um nome de variável? 
-
-.. admonition:: Definição.
-
-  O nome de uma variável precisa respeitar algumas regras como:
-  
-  - não pode começar com números. (ex. ``1a``)
-  - não pode possuir caracteres especiais, como símbolos matemáticos (ex. ``1-``)
-  - o caractere ``_`` pode ser utilizado para agrupar nomes grandes (ex. ``nome_completo`` é OK)
-  
-7. Quais os outros *tipos* de informação podemos armazenas numa variável? 
-
-Faça uma diferenciação nos tipos de dados utilizados.
+- Construir expressões matemáticas.
+- Demonstre a prioridade dos operadores matemáticos. 
+- Lembrar que representação de um número fracionário utiliza ``.`` e não ``,``.
 
 
-+------------------------+-------------------------------------------------------+---------+
-|       Tipo             |   Exemplos                                            | Tipo    +
-+========================+=======================================================+=========+
-| Números inteiros       | ``1``, ``2``, ``3``, ``4``, ``5``, ..., ``99``, ...   | 'int'   |
-+------------------------+-------------------------------------------------------+---------+
-| Números fracionários   | ``0.0001``, ``0.5``, ``3.14159``, ``12.5``, ...       | 'float' |
-+------------------------+-------------------------------------------------------+---------+
-| Texto                  | ``"10"``, ``"3.14159"``, ``"nome"``                   | 'string'|
-+------------------------+-------------------------------------------------------+---------+
+.. admonition:: Dificuldades
 
-.. admonition:: Nota sobre acentuação
+  Se você notar alguma dificuldade grave de absorção dos conteúdos, utilize os `videos <https://pt.khanacademy.org/math/arithmetic>`__ da Khan Academy como complementação!
 
-		Dentro da IDLE podemos utilizar acentuação, contudo devido a uma limitação desta plataforma, utlizamos a notação ``u" "`` quando nos referimos a trechos de texto (*strings*) com acentos.
+**Proposta**
 
+Apresente operações para lidar com:
 
-Ao concatenar uma variável, podemos notar que não existe o espaço em branco entra elas, para tal, podemos definir uma terceira variável que irá armazenar um *espaço em branco*. 
+- Testes com a procedência dos operadores.
+- Conversão de medidas.
+- Conversão de moedas.
 
-.. activecode:: concat2
+**Atividades**
 
-	print(u"Qual é o seu primeiro nome?")
-	nome = input()
-	print(u"Qual é seu sobrenome?")
-	sobrenome = input()
-	espaco = " "
-	print(nome + espaco + sobrenome)
-	
-.. admonition:: Captura de dados
+- Os alunos poderão acumular *progmoney* resolvendo exercícios do `banco de idéias <../Aula3/Exercicios.html>`__.
+- Destravar novos cartões de funcionalidades para serem utilizados em futuros projetos. 
+- Anuncie os `cartões disponíveis <../Apoio/cartoes.html#aula-3>`__.
 
-  A função ``input()`` captura o valor digitado pelo usuário depois que ele aperta a tecla ⏎ (*Enter* ou *return*). No exemplo acima atribuimos este valor 
-  a uma variável. 
-	
-	
-**Comentários**
-
-As vezes faz-se necessário explicar com mais detalhes trechos de código, por exemplo, qual motivo de estarmos declarando uma variável chamada ``ano``?
-É uma `boa pratica <../Apoio/boaspraticas.html>`__ de programação definir nomes de variáveis capazes de contextualizar seu conteúdo, contudo nem sempre isso é possível e definir nomes
-de variáveis exageradamente grandes pode criar problemas de legibilidade do código.  Para tal a linguagem Python permite escrever comentários, 
-ou seja, blocos de códigos que serão ignorados pelo computador na hora de transformas o código em linguagem de máquina, existem dois tipo:
-
-- Para comentários de uma **única** linha, utilizamos o caractere ``#``
-
-.. sourcecode:: python
-
-  # define a idade do jogador 
-  idade = 10
-
-- Para comentários de **múltiplas** linhas, utilizamos ``"""`` ou ``'''``
-
-.. sourcecode:: python
-
-  """
-  Este é um exemplo de comentário
-  em várias linhas, e o que esta dentro deste bloco
-  não será executado, a variável abaixo não será definida.
-  idade = 10
-  """
-  
-.. admonition:: Bônus
-
-  Como declarar diversas variáveis com uma única linha de código?
-    Apenas separe cada uma com ``,`` e depois do ``=`` atribua o conteúdo respectivo.
-  
-.. activecode:: bonus
-
-     # multiplas definições com uma linha de código
-     nome, sobrenome, idade = u"José", u"Silva", 20
-     print(nome,sobrenome,idade)
-
-
-	
-**Proposta** 
-	
-1. Combine com os alunos um padrão paro os arquivos, que tipo de conteúdo seria interessante acrescentar na forma de comentários?
-
-Algumas dicas:
-
-- `Meta <http://pt.wikipedia.org/wiki/Metadados>`__-informações: nome do arquivo, data, autores, descrição, contato, quais outros campos poderiam ser utilizados? 
-- Permissões de uso, apresente como opção as licenças `Creative Commons <http://creativecommons.org/choose/?lang=pt_BR>`__. 
-
-Um exemplo de cabeçalho:
-
-.. sourcecode:: python
-
-  """
-  idade.py - programa que calcula a idade
-  
-  Licença: CC BY-SA
-  
-  Autores: Lucas <lucas@programae.org.br>
-	   Tiago <tiago@programae.org.br>
-	    
-  Data: 18/08/2014
-  
-  Versão: 1.0
-  
-  """
-
-2. Defina uma variável chama ``__autor__`` que deverá ser sempre preenchiada com o nome da empresa escolhida por cada grupo.
-
-.. sourcecode:: python
-
-  __autor__ = 'empresa' 
-  
-**Atividades para a empresa**
-
-- Construir os cabeçalhos para os documentos da empresa
-- Acumular pontos do banco de exercícios.
- 
-
++------------------------------+--------------------------------------------------+
+|  Cartões de funcionalidades  |  Custo (`progmoney <../Apoio/progmoney.html>`__) |
++==============================+==================================================+
+|  **Potenciação**             |  ``20 $>``                                       |
++------------------------------+--------------------------------------------------+  
+|  **Frações**                 |  ``25 $>``                                       |
++------------------------------+--------------------------------------------------+
 
 Reflexão
-++++++++
++++++++++
+
+Além destas `reflexões gerais <../Apoio/feedback.html>`__ note como alunos trabalham os conceitos de matemática, se há alguma dificuldade de utilização.
+
+
+
 
 
 

@@ -8,20 +8,23 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-Aula 4: Primeiras Funcionalidades
-=================================
+Aula 4: Variáveis
+======================
 
 Objetivos
 +++++++++
 
-- Entender o que são funções e seus argumentos.
-- Aprender a utilizar o comando ``import``.
-- Compreender o conceito e acesso a módulos.
-- Trabalhar com números aleatórios.
- 
+
+- Aprender como salvar e executar programas no IDLE.
+- Entender o conceito de variável.
+- Entender quais tipos de dados podem ser armazenados. 
+- Melhorar a legibilidade.
+
 
 Preparação
 ++++++++++
+
+**Materiais**
 
 - IDLE - Veja na seção de ajuda `Como instalar o Python <../Apoio/comoinstalar.html>`__ 
 - `Editar <../Apoio/idle.html#sugestao-de-layout>`__ e `executar <../Apoio/idle.html#executando-um-codigo>`__ códigos no IDLE.
@@ -29,131 +32,175 @@ Preparação
 Atividades
 ++++++++++
 
+
 **Conceitos computacionais**
 
-Até o momento nos familiarizamos com as `idéias e conceitos <../Aula1/Plano.html>`__ para construir programas, começamos a conhecer 
-o `ambiente <../Apoio/idle.html>`__ IDLE, brincamos com `operadores matemáticos <../Aula2/Plano.html#atividades>`__ e finalmente aprendemos a `definir variáveis <../Aula3/Plano.html>`__. 
+1. Relembre as funcionalidades do IDLE utilizando o console.
+2. Ainda no console, crie um programa para armazenar um número em uma variável.
 
-.. admonition:: Funções
+.. activecode:: variavel
 
-  Funções são uma espécie de "*mini*-programa" dentro do código que permite executá-lo facilmente. Para acessá-las 
-  basta saber o seu *nome* e *argumentos*. 
+  ano = 2014
+
+3. Transfira este conceito para o `editor de texto <../Apoio/idle.html#novo-codigo>`__.
+4. Defina um tipo (*string*) para armazenar textos.
+
+.. sourcecode:: python
+	
+	>>> nome = "Pedro" 
+	>>> sobrenome = "Silva"
+	
+
+Repare que o *tipo* da variável é definido no momento que associamos um valor a ela. 
+	
+5. Verifique quais conceitos aritméticos aplicam-se em variáveis que armazenam números. 
+
+.. activecode:: idade
+
+  ano = 2014
+  nascimento = 1998
+  idade = ano - nascimento
+  print(idade)
+
+Destaque que cada *tipo* de dado permite operações diferentes, por exemplo, se armazenarmos um tipo **string** podemos concatenar (``+``) ou repetir (``*``) mas não subtrair ou dividir. 
+
+.. activecode:: string
+
+  nome = "nome"
+  sobrenome = "sobrenome"
+  nome_completo = nome + sobrenome
+  print(nome_completo)
+  print(nome * 5)
+
   
-  No Python elas seguem a estrutura: ``nome`` ``(`` ``argumentos`` ``)`` e podem retornar valores ou não. 
   
-  Nas aulas anteriores utilizamos duas funções print() e input()
+6. Quais as regras para definir um nome de variável? 
+
+.. admonition:: Definição.
+
+  O nome de uma variável precisa respeitar algumas regras como:
   
-  - Quando fazemos ``print(u"Olá Mundo")`` estamos invocando a função ``print()`` com o **argumento** ``u"Olá Mundo"``.
-  - Já ao utilizar a função ``input()`` temos a opção de passar um parâmetro (ex. ``input(u"qual o seu nome?")`` sendo que ela **retorna**
-    o valor inserido pelo usuário. Nos exemplos anteriores atribuimos esta entrada a uma variável.
+  - não pode começar com números. (ex. ``1a``)
+  - não pode possuir caracteres especiais, como símbolos matemáticos (ex. ``1-``)
+  - o caractere ``_`` pode ser utilizado para agrupar nomes grandes (ex. ``nome_completo`` é OK)
+  
+7. Quais os outros *tipos* de informação podemos armazenas numa variável? 
 
-1. Além das funções de **entrada/saída** (print/input) apresente outras funções, algumas sugestões:
-
-+------------+---------------------------------------------------+-----------------+--------------------+---------------------+
-| Função     | O que ela faz?                                    | Argumentos      |      Retorno       | Exemplo             |
-+============+===================================================+=================+====================+=====================+
-| ``type()`` | descobre o tipo da variável                       | objeto          |  tipo  do objeto   |  ``type(4)``        |
-+------------+---------------------------------------------------+-----------------+--------------------+---------------------+
-| ``len()``  | retorna o número de caracteres de uma sequência   | string ou lista |  número inteiro    | ``len("programaê")``|
-+------------+---------------------------------------------------+-----------------+--------------------+---------------------+
-| ``help()`` | retorna detalhes de acesso/retorno de uma função  | nome da função  | descrição da função| ``help(print)``     | 
-+------------+---------------------------------------------------+-----------------+--------------------+---------------------+
+Faça uma diferenciação nos tipos de dados utilizados.
 
 
-Trabalhe no `console interativo <../Apoio/idle.html#console-iterativo>`__ estas funções.
++------------------------+-------------------------------------------------------+---------+
+|       Tipo             |   Exemplos                                            | Tipo    +
++========================+=======================================================+=========+
+| Números inteiros       | ``1``, ``2``, ``3``, ``4``, ``5``, ..., ``99``, ...   | 'int'   |
++------------------------+-------------------------------------------------------+---------+
+| Números fracionários   | ``0.0001``, ``0.5``, ``3.14159``, ``12.5``, ...       | 'float' |
++------------------------+-------------------------------------------------------+---------+
+| Texto                  | ``"10"``, ``"3.14159"``, ``"nome"``                   | 'string'|
++------------------------+-------------------------------------------------------+---------+
 
-2. A linguagem Python contém muitas funções pré-definidas, as citadas acima são chamadas de funções *built-in* ou seja, estão "embutidas" e não dependem 
-de nenhum passo extra para serem acessadas: veja uma `lista de funções <../Apoio/builtin.html>`__ embutidas e trabalhe algumas com os alunos. 
+.. admonition:: Nota sobre acentuação
 
-3. Para acessarmos um conjunto maior de funções precisamos definir explicitamente sua localização, é preciso importá-la acessarmos dentro do programa. Para tal
-utilizamos a palavra-reservada ``import``, nesta aula iremos apresentar o pacote **random** que contem funções para trabalhar com números aleatórios.
+		Dentro da IDLE podemos utilizar acentuação, contudo devido a uma limitação desta plataforma, utlizamos a notação ``u" "`` quando nos referimos a trechos de texto (*strings*) com acentos.
 
-Por definição as instruções para importar módulos são definidas no inicio do programa.
+
+Ao concatenar uma variável, podemos notar que não existe o espaço em branco entra elas, para tal, podemos definir uma terceira variável que irá armazenar um *espaço em branco*. 
+
+.. activecode:: concat2
+
+	print(u"Qual é o seu primeiro nome?")
+	nome = input()
+	print(u"Qual é seu sobrenome?")
+	sobrenome = input()
+	espaco = " "
+	print(nome + espaco + sobrenome)
+	
+.. admonition:: Captura de dados
+
+  A função ``input()`` captura o valor digitado pelo usuário depois que ele aperta a tecla ⏎ (*Enter* ou *return*). No exemplo acima atribuimos este valor 
+  a uma variável. 
+	
+	
+**Comentários**
+
+As vezes faz-se necessário explicar com mais detalhes trechos de código, por exemplo, qual motivo de estarmos declarando uma variável chamada ``ano``?
+É uma `boa pratica <../Apoio/boaspraticas.html>`__ de programação definir nomes de variáveis capazes de contextualizar seu conteúdo, contudo nem sempre isso é possível e definir nomes
+de variáveis exageradamente grandes pode criar problemas de legibilidade do código.  Para tal a linguagem Python permite escrever comentários, 
+ou seja, blocos de códigos que serão ignorados pelo computador na hora de transformas o código em linguagem de máquina, existem dois tipo:
+
+- Para comentários de uma **única** linha, utilizamos o caractere ``#``
+
+.. sourcecode:: python
+
+  # define a idade do jogador 
+  idade = 10
+
+- Para comentários de **múltiplas** linhas, utilizamos ``"""`` ou ``'''``
 
 .. sourcecode:: python
 
   """
-  definições
+  Este é um exemplo de comentário
+  em várias linhas, e o que esta dentro deste bloco
+  não será executado, a variável abaixo não será definida.
+  idade = 10
   """
   
-  import random
+.. admonition:: Bônus
+
+  Como declarar diversas variáveis com uma única linha de código?
+    Apenas separe cada uma com ``,`` e depois do ``=`` atribua o conteúdo respectivo.
   
-  # resto do programa.
-  
-Para exemplificar esta aula utilizaremos funções definidas no módulo (*pacote*) random: ``randint()`` e ``choice``. 
-Proponha as seguintes atividades:
+.. activecode:: bonus
 
-4. Gerar um número aleatório inteiro entre ``-5`` e ``5``
+     # multiplas definições com uma linha de código
+     nome, sobrenome, idade = u"José", u"Silva", 20
+     print(nome,sobrenome,idade)
 
-.. activecode:: random1
 
-	import random # nossa "caixa" de funcionalidades
-	numero = random.randint(-5,5)
-	print(numero)
-
-Para acessar precisamos primeiro definir o módulo e depois a função em questão, o ``.`` faz esta "ligação" entre módulo e função. 
-Execute mais algumas vezes para ver os números se alternando.
 	
-	
-- Escolher um número na lista de cores.
-
-.. activecode:: random2
-
-  import random
-  cores = ('azul', 'amarelo', 'verde', 'azul', 'branco' )
-  print(random.choice(cores))
-  
-Note que a função ``choice()`` recebe uma lista de itens (cores) e retorna apenas uma. Neste exemplo não utilizamos variável,
-pegamos o retorno da função *choice* e passamos como parâmetro para a função *print*, conhecida comumente como funções aninhadas.
-
-
-.. admonition:: Funções aninhadas
-
-  É importante nesta aula destacar conceito de *retorno* de uma função como parâmetro de outra, a leitura deve ser de dentro para fora. No exemplo abaixo usamos três funções:
-  *input*, *len* e *print*. Com o ``input()`` obtemos a funcionalidade do usuário poder inserir um valor, seguimos com a função ``len()`` que pega o retorno do *input*
-  e calcula o número de caracteres, por fim utilizamos o resultado como argumento função ``print()``.
-
-  .. sourcecode:: python
-  
-    print(len(input("qual o seu nome: ")))
-
-- Simular a jogada de um dado de 6 lados. 
-
-.. activecode:: dado
-
-  import random
-  print(random.randint(1,6))
-   
-
-.. admonition:: Acesso a funções
-
-  Tente invocar uma função sem fazer um ``import``. Mostre que quando esquecemos de importar uma biblioteca 
-  geramos um erro de falta de definição.
-  
-    ``NameError: name 'random' is not defined``
-
-
 **Proposta** 
-
-- Utilize o ``randint`` e a função ``choice`` para criar um programa de sorteios.
-
-Exemplos:
-
-- MegaSena - construir um número para sortear os números.
-- AmigoSecreto - Escolher uma pessoa (semelhante ao problema com cores)
-
-Comandos sugeridos:
-
-* ``randint()``
-* ``choice()`` 
 	
+1. Combine com os alunos um padrão paro os arquivos, que tipo de conteúdo seria interessante acrescentar na forma de comentários?
+
+Algumas dicas:
+
+- `Meta <http://pt.wikipedia.org/wiki/Metadados>`__-informações: nome do arquivo, data, autores, descrição, contato, quais outros campos poderiam ser utilizados? 
+- Permissões de uso, apresente como opção as licenças `Creative Commons <http://creativecommons.org/choose/?lang=pt_BR>`__. 
+
+Um exemplo de cabeçalho:
+
+.. sourcecode:: python
+
+  """
+  idade.py - programa que calcula a idade
+  
+  Licença: CC BY-SA
+  
+  Autores: Lucas <lucas@programae.org.br>
+	   Tiago <tiago@programae.org.br>
+	    
+  Data: 18/08/2014
+  
+  Versão: 1.0
+  
+  """
+
+2. Defina uma variável chama ``__autor__`` que deverá ser sempre preenchiada com o nome da empresa escolhida por cada grupo.
+
+.. sourcecode:: python
+
+  __autor__ = 'empresa' 
+  
 **Atividades para a empresa**
 
-- 
+- Construir os cabeçalhos para os documentos da empresa
+- Acumular pontos do banco de exercícios.
+ 
+
 
 Reflexão
 ++++++++
-
 
 
 
