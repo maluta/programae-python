@@ -71,8 +71,6 @@ Destaque que cada *tipo* de dado permite operações diferentes, por exemplo, se
   nome_completo = nome + sobrenome
   print(nome_completo)
   print(nome * 5)
-
-  
   
 6. Quais as regras para definir um nome de variável? 
 
@@ -194,13 +192,13 @@ Um exemplo de cabeçalho:
   
 **Atividades para a empresa**
 
-- Construir os cabeçalhos para os documentos da empresa
-- Acumular pontos do banco de exercícios.
- 
+- Construir os cabeçalhos para os documentos da empresa.
+- Ofereça a possibilidade de adquirir mais pontos do `banco de exercícios <../Aula4/Exercicios.html>`__.
 
 
 Reflexão
 ++++++++
 
+Além das `reflexões gerais <../Apoio/feedback.html>`__
 
 
