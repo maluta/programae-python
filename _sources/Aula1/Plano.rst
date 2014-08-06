@@ -133,7 +133,6 @@ Como a proposta das aulas seguintes é orientar os alunos em projetos, pense nas
 
 --------
 
-
 .. blockly:: blockly1
 
    * controls
