@@ -104,8 +104,6 @@ Aula 8: Textos
    Aula7/Plano.rst
 
 
-
-
 Aula 9: Listas
 :::::::::::::::::::::::::::::::::
 
@@ -116,11 +114,11 @@ Aula 9: Listas
    :hidden: 
 
    
-Aula 10: Licensas
+Aula 10: Licenças
 :::::::::::::::::::::::::::::::::
 
 
-`Ver conteúdo <Aula9/Plano.html>`_
+`Ver conteúdo <Aula10/Plano.html>`_
 
 .. toctree::
    :hidden: 
@@ -130,7 +128,7 @@ Aula 11: Projetos
 :::::::::::::::::::::::::::::::::
 
 
-`Ver conteúdo <Aula9/Plano.html>`_
+`Ver conteúdo <Aula11/Plano.html>`_
 
 .. toctree::
    :hidden: 
