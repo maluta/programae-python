@@ -22,7 +22,8 @@ extensions = ['sphinx.ext.mathjax',
               'luther.sphinx.assess',
               'luther.sphinx.animation',
               'luther.sphinx.meta',
-              'gatech.parsons']
+              'gatech.parsons',
+              'luther.sphinx.blockly']
 
 
 # The suffix of source filenames.

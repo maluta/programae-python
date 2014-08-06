@@ -131,6 +131,42 @@ Além de algumas `reflexões gerais <../Apoio/feedback.html>`__  podemos observa
 É importante destacar sempre que a **criatividade** é ferramenta para construção. Nesta etapa avalie a participação e interesse dos alunos. 
 Como a proposta das aulas seguintes é orientar os alunos em projetos, pense nas possibilidades da linguagem e mostre como eles poderiam criar algo, categorize os tópicos mais populares.
 
+--------
+
+
+.. blockly:: blockly1
+
+   * controls
+   controls_if
+   controls_repeat_ext
+   ====
+   * logic
+   logic_compare
+   ====
+   * math
+   math_number
+   math_arithmetic
+   ====
+   * text
+   text
+   text_print
+   ====
+   variables
+
+   preload::
+   <xml>  
+      <block type="variables_set" id="1" inline="true" x="25" y="9">    
+         <field name="VAR">X</field>    
+         <value name="VALUE">      
+            <block type="math_number" id="2">
+               <field name="NUM">10</field>
+            </block>    
+         </value>  
+      </block>
+   </xml>
+
+
+
 Boa aula!!!
 
 **Comentários: Educador, clique no link abaixo (Show Comments) e utilize este espaço para fazer comentários sobre este plano**
