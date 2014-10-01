@@ -8,185 +8,173 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-Aula 5: Controles (I)
-=======================
+Aula 5: Funções
+============================
 
 Objetivos
 +++++++++
 
-- Utilizar operadores comparações.
-- Utilizar operadores Booleanos (True e False)
-- Aprender sentenças com ``if``
-
+- Aprender a construir e utilizar funções
+- Inicio dos projetos das empresas
 
 Preparação
 ++++++++++
 
-- IDLE - Veja na seção de ajuda `Como instalar o Python <../Apoio/comoinstalar.html>`__ 
-- `Editar <../Apoio/idle.html#sugestao-de-layout>`__ e `executar <../Apoio/idle.html#executando-um-codigo>`__ códigos no IDLE.
+- Se ainda não possui o IDLE - Veja na seção de ajuda `Como instalar o Python <../Apoio/comoinstalar.html>`__
+- Conferir se as funcionalidades `Editar <../Apoio/idle.html#sugestao-de-layout>`__ e `executar <../Apoio/idle.html#executando-um-codigo>`__ códigos no IDLE estã funcionando corretamente.
 
 
 Atividades
 ++++++++++
 
-**Conceitos computacionais** 
+**Conceitos computacionais necessários**
 
-Até o momento, utilizamos instruções sequenciais para dar ordens ao computador. Agora iremos entrar em um mundo novo, onde teremos 
-de definir **decisões**. Contudo, antes de apresentar os mecanismos da linguagem para tomada de decisões vamos aprender como 
-efetuar comparações.
+Faça os `exercícios de funções <http://www.codecademy.com/pt-BR/courses/python-beginner-pt-BR-30pxi/0/1>`_ do Codecademy.
 
-Abra o `console <../Apoio/idle.html#console-iterativo>`__ e trabalhe alguns exemplos:
+.. admonition:: Reuso
+
+  É importante trabalhar com os alunos a importância das funções com uma ferramenta para re-aproveitamento do código.
+
+Alguns sinônimos para funções:
+
+- mini-programa
+- código reutilizável
+
+
+**Na sala de aula**
+
+1. Abra o Editor de Texto do IDLE e mostre como declarar uma função.
+
+
+Exemplo:
+
+.. activecode:: aula8_ex1
+
+  def minha_funcao():
+    print(u"código")
+    print(u"da")
+    print(u"função")
+
+
+Execute o código e proponha as seguintes perguntas:
+
+- Qual a saída deste trecho de código?
+- O que é necessário para vermos a execução do ``print``
+
+
+É importante destacar:
+  - `indentação <../Apoio/boaspraticas.html#indentacao>`__ do bloco: 4 espaços ou *tab*.
+  - a definição de função segue o seguinte formato:
+
+  ``def`` **nome** ``(`` **parametros** ``)`` ``:``
+
+     # seu código aqui
+
+     **return** valor
+
+Da mesma forma que passamos parâmetros para as funções ``print()``, ``len()``, ``input()``, ``range()`` nas aulas anteriores, podemos criar nossas
+próprias funções com inúmeros parâmetros bem como retornar valores das funções. Um exemplo de função para somar dois números x e y:
+
+.. activecode:: aula8_ex2
+
+  def soma(x,y):
+    return x + y
+
+  print(soma(5,4))
+
+**A escolha do nome de um função segue as mesmas regras das variáveis.**
+
+
+
+**Prosposta**
+
+- Construir funções simples para operações aritméticas.
+- Como colocar dentro de funções o quê aprendemos nas ultimas aulas?
+
+**Exercícios**
+
+1. Fazer uma função que imprima o nome de cada um dos membros das equipe.
+
+.. reveal:: ex1
+    :showtitle: Ver resposta
+    :hidetitle: Ocultar
+
+    .. sourcecode:: python
+
+        def imprime_nomes():
+          print("Nome 1")
+          print("Nome 1")
+          print("Nome 1")
+
+        imprime_nomes()
+
+
+2. Fazer uma função que retorne a soma das idades de cada um dos membros da equipe (lembre de converter para inteiro, é um erro que os alunos comentem com frequência)
+
+.. reveal:: ex2
+    :showtitle: Ver resposta
+    :hidetitle: Ocultar
+
+    .. sourcecode:: python
+
+        def retorna_soma():
+          idade1 = input("Qual a idade da pessoa #1? ")
+          idade2 = input("Qual a idade da pessoa #2? ")
+          idade3 = input("Qual a idade da pessoa #3? ")
+          soma = int(idade1) + int(idade2) + int(idade3)
+          return soma
+
+        print(retorna_soma())
+
+**Gamification: atividades para o jogo**
+
+Proponha uma reflexão de como eles irão utilizar funções na construção dos seus
+programas e jogos. Proponha a atividade para fazer um **validador de idade** para o jogo e
+o **about** (ou seja, a função que imprime os autores do programa)
+
+
+1. Validador de Idade
 
 .. sourcecode:: python
 
-  >>> -1 > 1
-  False
-  >>> 10 < 9
-  False
-  >>> 2+2 == 5
-  False
+  def valida_idade():
+    idade = input("Qual sua idade? ")
+    if int(idade) >= 15:
+      print("Bem-vindo ao jogo")
+      return True
+    else:
+      print("Você não pode jogar!")
+      return False
 
-Repare que sempre obtemos como resposta ``False`` (falso) ou ``True`` (verdadeiro). 
+  # precisamos invocar (chamar) a função
+  valida_idade()
 
-Também podemos aplicar estes operadores em outros tipos de dados, por exemplo, não-numéricos:
+Se eles tiverem dúvidas no `if` fale que ele será abordado com mais detalhes na próxima aula.
+
+2. Sobre (About)
 
 .. sourcecode:: python
 
-  >>> "a" == "b"
-  False
-  >>> "a" < "b"
-  True
+  def sobre():
+    print("Este programa foi desenvolvido por:")
+    print("1. Fulano")
+    print("2. Ciclano")
+    print("3. Beltrano")
 
-É importante destacar para os alunos dois pontos, quando utilizamos o operador de comparação de igualdade (``==``) estamos nos referindo o **conteúdo** das variáveis, estamos
-vendo se "a" *é igual a* "b". Entretando quando utilizamos o operador ``>`` ou ``<`` a lógica é outra. Para entedermos é preciso demonstrar a função (`built-in <../Apoio/builtin.html>`__) 
-``ord()``.
+  sobre() # chama a função
 
-.. activecode:: ord
+Peça para que eles salvem o arquivo no editor e enviem para seu e-mail.
 
-  print("a",ord("a"))
-  print("b",ord("b"))
-  
- 
-Repare que quando efetuamos a operação ``<`` na verdade estamos comparando se o código referente a letra ``a`` (97) é menor que o da letra ``b`` (98).
-
-De posse dos conceitos de comparação podemos seguir e aprender a primeira instrução para efetuar decisões no Python, a palavra-reservada ``if``.
-
-Começemos com um exemplo:
-
-.. activecode:: if
-
-  idade = input(u"Qual é a sua idade?") 
-  idade = int(idade)
-  if idade > 14 == True:
-    print(u"Bem-vindo ao curso de Python!")
-    print(u"Sua idade é " + str(idade) + " anos.")
-  
-Vamos analisar cada linha individualmente:
-
-- ``#1`` → Chama a função input() passando como parâmetro a pergunta *'Qual é a sua idade?'* e armazena a resposta na variável idade.
-- ``#2`` → Neste momento utilizamos a função (*built-in*) ``str()`` para converter o tipo string para o tipo inteiro. 
-- ``#3`` → **Se** o conteúdo da variável idade for maior que 14 executa a próxima linha.
-- ``#4`` → Caso a sentença da linha 3 seja verdadeira a função ``print`` com a mensagem de boas vindas é executada. 
-- ``#5`` → Novamente utilizamos a função (built-in) ``str()`` que faz o oposto da função *int()* e converte um tipo numérico em string.
-
-**Fluxograma**
-
-Apresente os fluxogramas como ferramentas de apoio para estruturar o raciocínio. Desenhe no papel (ou lousa) como seria o 
-trecho de execução de parte do programa.  Abaixo temos a condição ``if`` que dependendo da reposta sim/não executa um bloco de 
-código diferente. 
-
-.. image:: ../../_static/fluxograma.png
-  :height: 640px
-  :width: 480px
-  :scale: 50%
-  :align: center
-  
-Não há regras fixas para a construção do fluxograma, a proposta aqui é apenas esboçar o fluxo do programa.
-
-.. admonition:: Indentação
-
-  Repare que as instruções das linhas 4 e 5 estão um pouco deslocados para a direita. A este recuo dá-se o nome de **indentação**
-  ou seja, é um bloco de código que é executado dentro de um *contexto*. No exemplo acima, as duas linhas ``print`` só são executadas 
-  se confirmarem a condição definida no ``if``. 
-  
-  **Para a separação de blocos de código, a linguagem Python usa espaços em branco.**
-
-  Coloque o exercício anterior em blocos indentados.
-
-  .. parsonsprob:: q1_ind
-  
-   -----
-   idade = input(u"Qual é a sua idade?") 
-   idade = int(idade)
-   =====
-   if idade > 14 == True:
-   =====
-          print(u"Bem-vindo ao curso de Python!")
-          print(u"Sua idade é " + str(idade) + " anos.")
-     
-  
-  Veja mais exemplos `aqui <../Apoio/boaspraticas.html#indentacao>`__.
-  
-Para exemplificar vamos definir um protótipo do comando ``if`` que não faz absolutamente nada. 
-    
-.. sourcecode:: python
-  
-  if True:
-    pass
-  
-Veja que a condição é **sempre** verdadeira (True) e a palavra-reservada ``pass`` faz com que o código seja validado sem que ainda precisemos pensar na 
-*implementação* caso a condição do *if* seja confirmada.
-
-Mais exemplos com ``if``.
-
-.. activecode:: ex_if
-
-  nome = u"José"
-  if nome == u"José":
-    print(u"Seu nome é: " + nome)
+Caso sobre um tempo, mostre o `Gist <https://gist.github.com/>`_ para armazenar trechos de código.
 
 
-Por fim, apresente a necessidade de ter o segundo caminho, caso a condição da sentença não seja confirmada, para tal apenas complementamos com a palavra ``else``.
-
-    
-**Proposta**
-
-- Utilize as funções para números aleatórios para fazer um jogo de adivinhação.
-- Sugestão: Utilize o ``if`` para introduzir a idéia probabilidades, por exemplo, a instrução ``random.randint(1,3)`` tem 33,3% de chances (em média) de occorer
-  cada uma das possibilidades. Exemplo:
-  
-.. activecode:: prob 
-
-  import random
-  print(u"Você caminha em direção a sala...")
-  if random.randint(1,2) == 1: 
-      print(u"Um monstro aparece")
-  else:
-      print(u"Tudo esta calmo e tranquilo")
-  
-
-Quando fazemos ``randint(1,2)`` podemos ter como resposta ``1`` ou ``2`` logo, cada uma das resposta, em média, aparecerá em 50% dos casos. 
-
-- Comece a trabalhar com os alunos o "enredo" da história. Como esta pode ser construída?
-
-.. admonition:: RPG
-
-  Pergunte na sala se algum dos alunos conhece jogos de `RPG <http://pt.wikipedia.org/wiki/Role-playing_game>`__ (*Role-playing Game*), eles podem dar dicas de como estrutura uma aventura. 
-
-
-**Atividades para a empresa**
-
-- Ofereça a possibilidade de adquirir mais pontos do `banco de exercícios <../Aula5/Exercicios.html>`__.
-
-  
 Reflexão
 ++++++++
 
-TBA
+Nesta aula é importante que todos tenham compreendido a estrutura básica de funções e sua necessidade.
+A partir de agora o uso de funções será utilizado amplamente e é preciso que os alunos explorem bastante seu uso.
 
-**Comentários: Educador, clique no link abaixo (Show Comments) e utilize este espaço para fazer comentários sobre este plano**
-
-.. disqus::
-  :shortname: programae
-  :identifier: aula5
-
+- O que fizemos e que funcionou?
+- O que fizemos e que não funcionou?
+- Quais as dúvidas mais comuns que apareceram durante a aula?
+- Qual as maiores dificuldades na execução das atividades?
